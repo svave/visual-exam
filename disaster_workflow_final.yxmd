@@ -1,0 +1,1473 @@
+<?xml version="1.0" ?>
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="1">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-65" y="357.4794520547945" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>fema_individuals_damage_pay</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="0">2af32c65-166e-4f54-bdf8-e5fdfe853876</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <Delimeter>,</Delimeter>
+            <HeaderRow>True</HeaderRow>
+            <FieldLen>254</FieldLen>
+            <ImportLine>1</ImportLine>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <IgnoreErrors>False</IgnoreErrors>
+            <CodePage>28591</CodePage>
+            <AllowShareWrite>False</AllowShareWrite>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <SingleThreadRead>False</SingleThreadRead>
+          </FormatSpecificOptions>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="2">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-66.73972602739724" y="-66.9041095890411" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>Disaster_Summaries_cleaned</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="0">25d32f34-4485-42e8-a9c8-8c27435a16d1</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <Delimeter>,</Delimeter>
+            <HeaderRow>True</HeaderRow>
+            <FieldLen>254</FieldLen>
+            <ImportLine>1</ImportLine>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <IgnoreErrors>False</IgnoreErrors>
+            <CodePage>28591</CodePage>
+            <AllowShareWrite>False</AllowShareWrite>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <SingleThreadRead>False</SingleThreadRead>
+          </FormatSpecificOptions>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-65.52941176470588" y="144" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>states</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="0">252c1ac8-1569-4733-8474-52896a705e54</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <Delimeter>,</Delimeter>
+            <HeaderRow>True</HeaderRow>
+            <FieldLen>254</FieldLen>
+            <ImportLine>1</ImportLine>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <IgnoreErrors>False</IgnoreErrors>
+            <CodePage>28591</CodePage>
+            <AllowShareWrite>False</AllowShareWrite>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <SingleThreadRead>False</SingleThreadRead>
+          </FormatSpecificOptions>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="9">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="479.3698630136986" y="310.8904109589041" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Type_grouped" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Incident_type2" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Right_State" selected="True" rename="Left_Right_State" input="Left_" />
+                <SelectField field="Right_State" selected="True" rename="Right_State" input="Right_" />
+                <SelectField field="Right_State Code" selected="True" rename="Right_State Code" input="Right_" />
+                <SelectField field="Right_Division" selected="True" rename="Right_Division" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="11">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="578.5890410958904" y="316.3835616438355" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Mode>ByName</Mode>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="19">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="362.97260273972597" y="41.479452054794535" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="state" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="State Code" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_State" selected="True" rename="Right_State" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="20">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="468.3561643835616" y="42.849315068493155" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Mode>ByName</Mode>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="29">
+      <EngineSettings Macro="Cleanse.yxmc" />
+      <GuiSettings Plugin="Cleanse.yxmc">
+        <Position x="687.4794520547946" y="316.3835616438356" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Count","Amount","Average"</Value>
+          <Value name="Check Box (84)">False</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">True</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">True</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="30">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="781.1506849315069" y="315.3835616438355" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="incidentBeginDate" selected="True" type="Date" size="10" />
+            <SelectField field="incidentEndDate" selected="False" />
+            <SelectField field="state" selected="False" />
+            <SelectField field="Left_Right_State" selected="True" rename="State" />
+            <SelectField field="Right_State" selected="False" />
+            <SelectField field="State Code" selected="True" />
+            <SelectField field="Division" selected="True" />
+            <SelectField field="disasterNumber" selected="False" />
+            <SelectField field="declarationDate" selected="False" />
+            <SelectField field="incidentType" selected="False" />
+            <SelectField field="declarationTitle" selected="True" />
+            <SelectField field="disasterCloseoutDate" selected="False" />
+            <SelectField field="designatedArea" selected="False" />
+            <SelectField field="Type" selected="True" />
+            <SelectField field="Type_grouped" selected="True" />
+            <SelectField field="Avg_Average" selected="True" rename="Avg_ground_household" />
+            <SelectField field="Incident_type2" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="32">
+      <EngineSettings Macro="Cleanse.yxmc" />
+      <GuiSettings Plugin="Cleanse.yxmc">
+        <Position x="874.0410958904109" y="314.3835616438357" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Count","Amount","Average"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="33">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="968.4084507042255" y="313.7887323943661" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="34">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-64.09090909090901" y="-185.27272727272728" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>us_weather_data</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File OutputFileName="" RecordLimit="0" SearchSubDirs="False" FileFormat="0">1ad06bc3-ce70-4ee2-ae10-4c235de4b0eb</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <Delimeter>,</Delimeter>
+            <HeaderRow>True</HeaderRow>
+            <FieldLen>254</FieldLen>
+            <ImportLine>1</ImportLine>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <IgnoreErrors>False</IgnoreErrors>
+            <CodePage>28591</CodePage>
+            <AllowShareWrite>False</AllowShareWrite>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <SingleThreadRead>False</SingleThreadRead>
+          </FormatSpecificOptions>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="39">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="314.090909090909" y="-183.63636363636365" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>year = Left([Date], Length([Date]) - 2)
+//Extract year</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Left([Date], Length([Date]) - 2)&#xA;//Extract year" value="" field="year" type="V_WString" size="1073741823" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="43">
+      <EngineSettings Macro="Cleanse.yxmc" />
+      <GuiSettings Plugin="Cleanse.yxmc">
+        <Position x="201.27272727272725" y="-184.45454545454544" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Date","Value","type","state"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">True</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="44">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="423.5454545454545" y="-183" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>month = right([Date], Length([Date]) - 4)
+//Extract month</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="right([Date], Length([Date]) - 4)&#xA;//Extract month" value="" field="month" type="V_WString" size="1073741823" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="45">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="549.7272727272727" y="-183" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>date = [year]+"-"+[month]+"-"+"01"
+//assemble date</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[year]+&quot;-&quot;+[month]+&quot;-&quot;+&quot;01&quot;&#xA;//assemble date" value="" field="date" type="V_String" size="254" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="50">
+      <EngineSettings Macro="Cleanse.yxmc" />
+      <GuiSettings Plugin="Cleanse.yxmc">
+        <Position x="668.909090909091" y="-183" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Date"</Value>
+          <Value name="Check Box (84)">False</Value>
+          <Value name="Check Box (117)">False</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">True</Value>
+          <Value name="Check Box (53)">True</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="52">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1055.1830985915492" y="313.7887323943662" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>join_date = Left([incidentBeginDate],7)+"-01"</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Left([incidentBeginDate],7)+&quot;-01&quot;" value="" field="join_date" type="Date" size="10" />
+          </FormulaFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="53">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="756.9452054794522" y="38.36986301369862" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="join_date" />
+            <Field field="State" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Date" />
+            <Field field="state" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_state" selected="True" rename="Right_state" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="54">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="899.5396825396825" y="39.17460317460319" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Mode>ByName</Mode>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="55">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="997.5396825396825" y="39.17460317460319" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="incidentBeginDate" selected="True" />
+            <SelectField field="State" selected="False" rename="undefined_State" />
+            <SelectField field="State Code" selected="True" />
+            <SelectField field="Right_State" selected="True" rename="State" />
+            <SelectField field="Division" selected="True" rename="Region" />
+            <SelectField field="declarationTitle" selected="False" />
+            <SelectField field="Type" selected="True" />
+            <SelectField field="Type_grouped" selected="True" />
+            <SelectField field="Avg_ground_household" selected="True" />
+            <SelectField field="join_date" selected="False" />
+            <SelectField field="Date" selected="False" />
+            <SelectField field="Avg_precipitation" selected="True" rename="Precipitation" />
+            <SelectField field="Avg_temperature" selected="True" rename="Temperature" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="57">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="783.3636363636365" y="-183.8181818181818" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Date" selected="True" type="Date" size="10" />
+            <SelectField field="Value" selected="True" type="Float" size="4" />
+            <SelectField field="type" selected="True" />
+            <SelectField field="state" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="62">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="890" y="-182.63636363636365" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <HeaderField field="type" />
+          <DataField field="Value" />
+          <GroupFields>
+            <Field field="Date" />
+            <Field field="state" />
+          </GroupFields>
+          <Methods>
+            <Method method="Avg" />
+          </Methods>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="64">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1319.6046511627908" y="45.30232558139534" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText>disaster_final_df8.csv</DefaultAnnotationText>
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">disaster_final_df8.csv</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <Delimeter>,</Delimeter>
+            <HeaderRow>True</HeaderRow>
+            <ForceQuotes>False</ForceQuotes>
+            <CodePage>65001</CodePage>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="67">
+      <EngineSettings Macro="Cleanse.yxmc" />
+      <GuiSettings Plugin="Cleanse.yxmc">
+        <Position x="28.825396825396865" y="144.58730158730157" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"State","State Code","Division"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">True</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">True</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="69">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1078.7777777777778" y="39.76190476190476" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>Hawaii</Operand>
+            </Operands>
+            <Field>State</Field>
+          </Simple>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="82">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="225.74999999999997" y="441.25" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Incident Type" selected="True" rename="Incident_type2" />
+            <SelectField field="Average" selected="True" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="84">
+      <EngineSettings Macro="Cleanse.yxmc" />
+      <GuiSettings Plugin="Cleanse.yxmc">
+        <Position x="103.73972602739724" y="364.04109589041093" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Average"</Value>
+          <Value name="Check Box (84)">False</Value>
+          <Value name="Check Box (117)">False</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">True</Value>
+          <Value name="Check Box (53)">True</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">True</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="86">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="-70.89041095890411" y="477" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <NumRows value="48" />
+          <Fields>
+            <Field name="ST" />
+            <Field name="Incident Type" />
+            <Field name="Count" />
+            <Field name="Average" />
+          </Fields>
+          <Data>
+            <r>
+              <c>AK</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>AL</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>AR</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>AS</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>CA</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>CO</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>CT</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>FL</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>GA</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>HI</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>IA</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>IL</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>IN</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>KS</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>KY</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>LA</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>MA</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>MD</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>ME</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>MI</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>MN</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>MO</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>MP</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>MS</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>MT</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>NC</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>ND</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>NE</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>NH</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>NJ</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>NV</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>NY</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>OH</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>OK</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>OR</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>PA</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>PR</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>RI</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>SC</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>SD</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>TN</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>TX</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>VA</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>VT</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>WA</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>WI</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>WV</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+            <r>
+              <c>WY</c>
+              <c>Other</c>
+              <c>0</c>
+              <c>4326.921724</c>
+            </r>
+          </Data>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="87">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="144.25000000000006" y="441.75" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Mode>ByName</Mode>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="89">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="-65.73972602739727" y="29.082191780821915" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <NumRows value="26" />
+          <Fields>
+            <Field name="Type" />
+            <Field name="Type_grouped" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Fire</c>
+              <c>Fire</c>
+            </r>
+            <r>
+              <c>Severe Storm</c>
+              <c>Severe Storm(s)</c>
+            </r>
+            <r>
+              <c>Hurricane</c>
+              <c>Hurricane</c>
+            </r>
+            <r>
+              <c>Snowstorm</c>
+              <c>Severe Storm(s)</c>
+            </r>
+            <r>
+              <c>Flood</c>
+              <c>Flood</c>
+            </r>
+            <r>
+              <c>Coastal Storm</c>
+              <c>Severe Storm(s)</c>
+            </r>
+            <r>
+              <c>Tornado</c>
+              <c>Tornado</c>
+            </r>
+            <r>
+              <c>Other</c>
+              <c>Other</c>
+            </r>
+            <r>
+              <c>Severe Ice Storm</c>
+              <c>Severe Storm(s)</c>
+            </r>
+            <r>
+              <c>Biological</c>
+              <c>Other</c>
+            </r>
+            <r>
+              <c>Mud/Landslide</c>
+              <c>Mud/Landslide</c>
+            </r>
+            <r>
+              <c>Tropical Storm</c>
+              <c>Severe Storm(s)</c>
+            </r>
+            <r>
+              <c>Dam/Levee Break</c>
+              <c>Other</c>
+            </r>
+            <r>
+              <c>Earthquake</c>
+              <c>Earthquake</c>
+            </r>
+            <r>
+              <c>Typhoon</c>
+              <c>Tornado</c>
+            </r>
+            <r>
+              <c>Freezing</c>
+              <c>Other</c>
+            </r>
+            <r>
+              <c>Toxic Substances</c>
+              <c>Other</c>
+            </r>
+            <r>
+              <c>Chemical</c>
+              <c>Other</c>
+            </r>
+            <r>
+              <c>Terrorist</c>
+              <c>Other</c>
+            </r>
+            <r>
+              <c>Drought</c>
+              <c>Other</c>
+            </r>
+            <r>
+              <c>Winter Storm</c>
+              <c>Severe Storm(s)</c>
+            </r>
+            <r>
+              <c>Human Cause</c>
+              <c>Other</c>
+            </r>
+            <r>
+              <c>Fishing Losses</c>
+              <c>Other</c>
+            </r>
+            <r>
+              <c>Tsunami</c>
+              <c>Tornado</c>
+            </r>
+            <r>
+              <c>Severe Storm(s)</c>
+              <c>Severe Storm(s)</c>
+            </r>
+            <r>
+              <c>Volcanic Eruption</c>
+              <c>Other</c>
+            </r>
+          </Data>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="91">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="84.95890410958907" y="-11.260273972602747" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="incidentType" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Type_grouped" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="93">
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="314" y="441" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Average" action="Avg" rename="Avg_Average" />
+            <SummarizeField field="Incident_type2" action="GroupBy" rename="Incident_type2" />
+          </SummarizeFields>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="94">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="19.109589041095887" y="358.2191780821918" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>Sum:</Operand>
+            </Operands>
+            <Field>ST</Field>
+          </Simple>
+        </Configuration>
+      </Properties>
+    </Node>
+    <Node ToolID="95">
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1186.2093023255811" y="45.46511627906975" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <DefaultAnnotationText />
+          <Left value="False" />
+          <Name />
+        </Annotation>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Avg_ground_household" action="Sum" rename="Avg_ground_household" />
+            <SummarizeField field="Temperature" action="Avg" rename="Avg_Temperature" />
+            <SummarizeField field="Precipitation" action="Avg" rename="Avg_Precipitation" />
+            <SummarizeField field="Type_grouped" action="GroupBy" rename="Type_grouped" />
+            <SummarizeField field="Type" action="GroupBy" rename="Type" />
+            <SummarizeField field="Region" action="GroupBy" rename="Region" />
+            <SummarizeField field="State" action="GroupBy" rename="State" />
+            <SummarizeField field="State Code" action="GroupBy" rename="State Code" />
+            <SummarizeField field="incidentBeginDate" action="GroupBy" rename="incidentBeginDate" />
+          </SummarizeFields>
+        </Configuration>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection name="#1">
+      <Origin ToolID="9" Connection="Join" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="9" Connection="Left" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="9" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="29" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output26" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="32" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output26" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output26" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="43" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="50" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="53" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output26" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="53" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="67" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output26" />
+      <Destination ToolID="19" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="53" Connection="Join" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="87" Connection="Output" />
+      <Destination ToolID="82" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="84" Connection="Output26" />
+      <Destination ToolID="87" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="Output" />
+      <Destination ToolID="91" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="91" Connection="Join" />
+      <Destination ToolID="19" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="82" Connection="Output" />
+      <Destination ToolID="93" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="19" Connection="Join" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="93" Connection="Output" />
+      <Destination ToolID="9" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="94" Connection="False" />
+      <Destination ToolID="84" Connection="Input2" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="86" Connection="Output" />
+      <Destination ToolID="87" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="19" Connection="Left" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="95" Connection="Output" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="False" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="91" Connection="Left" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Annotation includeToolName="False" on="True" />
+    <CancelOnError value="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <DisableAllOutput value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <GlobalRecordLimit value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Memory default="True" />
+    <MetaInfo>
+      <Author />
+      <CategoryName />
+      <Company />
+      <Copyright />
+      <Description />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <Name>disaster_workflow_final</Name>
+      <NameIsFileName value="True" />
+      <RootToolName />
+      <SearchTags />
+      <Telemetry>
+        <PreviousWorkflowId value="b81f2833-a14e-464f-a9e7-a57a0f2ef6c9" />
+        <OriginWorkflowId value="5fdc4f33-98bd-4477-b7ef-99b815372e20" />
+      </Telemetry>
+      <ToolInDb value="False" />
+      <ToolVersion />
+      <WorkflowId value="985ec411-7d66-43e7-b644-4529a44ac5b3" />
+    </MetaInfo>
+    <RunWithE2 value="True" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <TempFiles default="True" />
+    <ZoomLevel value="0" />
+  </Properties>
+</AlteryxDocument>
